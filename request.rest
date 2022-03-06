@@ -1,0 +1,60 @@
+# Get all posts
+GET http://localhost:5000/api/posts
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTM1ZmQ1NGQ1ZTRmYTU5ZTg1MmZhZGIiLCJpYXQiOjE2MzEwMDE5MjN9.pAbeG2rOUmvh9sge_FdEVali3vV2PKGOAJY84I7EGz8
+
+###
+
+# Register
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+  "username":"quang2",
+  "password":"123456"
+}
+
+###
+
+# Login
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "username":"quang",
+  "password":"12345"
+}
+
+###
+
+# Create post
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTM2M2FkOTkwZDkxY2M3OGFkYWJhZWUiLCJpYXQiOjE2MzA5Nzk1MTd9.KGgDYWbFWhnTHa0R-t7_sgvWscNRw91eZQ0o3CDzJiU
+
+{
+  "title":"new ExpressJs",
+  "description":"Fast, unopinionated, minimalist web framework for Node.js",
+  "url":"expressjs.com"
+}
+
+###
+
+
+# Update post
+PUT  http://localhost:5000/api/posts/6136430c9b47df2ee96cd87b
+Content-Type: application/json
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTM1ZmQ1NGQ1ZTRmYTU5ZTg1MmZhZGIiLCJpYXQiOjE2MzA5OTg4NDJ9.NwkDzIUMDy6F5zV-cWYFZkwj_0Q95vdoqXajqler1Zc
+
+{
+  "title":"ExpressJs2",
+  "description":"Fast, unopinionated",
+  "url":"expressjs.com",
+  "status":"LEARNING"
+}
+
+###
+
+# Delete post
+DELETE   http://localhost:5000/api/posts/613641859b47df2ee96cd874
+Content-Type: application/json
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTM1ZmQ1NGQ1ZTRmYTU5ZTg1MmZhZGIiLCJpYXQiOjE2MzA5OTg4NDJ9.NwkDzIUMDy6F5zV-cWYFZkwj_0Q95vdoqXajqler1Zc
